@@ -1,0 +1,48 @@
+### Create new user
+POST http://localhost:3333/users
+Content-Type: application/json
+
+{
+    "username": "gpinho",
+    "name": "Gustavo Pinho"
+}
+
+
+### Get all tasks
+GET http://localhost:3333/todos
+Content-Type: application/json
+username: gpinho
+
+
+### Create a new task
+POST http://localhost:3333/todos
+Content-Type: application/json
+username: gpinho
+
+{
+    "title": "Task 01",
+    "deadline": "2021-11-12"
+}
+
+
+### Update a task
+PUT http://localhost:3333/todos/32f4df71-ac90-4782-bca9-3f14c008d59e
+Content-Type: application/json
+username: gpinho
+
+{
+    "title": "Task 01",
+    "deadline": "2021-11-13"
+}
+
+
+### Complete a task
+PATCH  http://localhost:3333/todos/796256cf-d288-4b11-8d01-b85e5dc2953c/done
+Content-Type: application/json
+username: gpinho
+
+
+### Delete a task
+DELETE   http://localhost:3333/todos/796256cf-d288-4b11-8d01-b85e5dc2953c
+Content-Type: application/json
+username: gpinho
